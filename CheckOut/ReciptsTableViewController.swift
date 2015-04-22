@@ -1,5 +1,5 @@
 //
-//  MenuCard.swift
+//  ReciptsTableViewController.swift
 //  CheckOut
 //
 //  Created by Joachim Dittman on 22/04/15.
@@ -7,13 +7,17 @@
 //
 
 import UIKit
-//
-class MenuCard: UITableViewController, UITableViewDelegate, UITableViewDataSource {
-        var menuItems = ["Kaffe","Kage","Cola","Øko cola","Juice","Te","Kaffe","Kage","Cola","Øko cola","Juice","Te"]
-       var menuItemPrices = ["10.00","15.00","20.00","25.00","10.00","10.00","10.00","15.00","20.00","25.00","10.00","10.00"]
+
+class ReciptsTableViewController: UITableViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
- 
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     override func prefersStatusBarHidden() -> Bool {
         return true
@@ -28,24 +32,24 @@ class MenuCard: UITableViewController, UITableViewDelegate, UITableViewDataSourc
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 1
+        return 0
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return menuItems.count
+        return 0
     }
 
- 
+    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
 
-        cell.textLabel?.text = "\(menuItems[indexPath.row]) (\(menuItemPrices[indexPath.row]) kr.)"
-        cell.detailTextLabel?.text = "En lækker omgang "
+        // Configure the cell...
+
         return cell
     }
-
+    */
 
     /*
     // Override to support conditional editing of the table view.

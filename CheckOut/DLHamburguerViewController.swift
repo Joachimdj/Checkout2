@@ -109,7 +109,9 @@ class DLHamburguerViewController: UIViewController {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setupHamburguerViewController()
     }
-
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupHamburguerViewController()

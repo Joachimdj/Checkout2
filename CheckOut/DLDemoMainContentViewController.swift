@@ -18,6 +18,9 @@ class DLDemoMainContentViewController: UIViewController {
         
         
     }
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
  
 
     @IBAction func menuButtonTouched(sender: AnyObject) {

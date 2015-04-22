@@ -8,7 +8,7 @@
         <!--Betaling-->
         <scene sceneID="ZqT-bP-XTp">
             <objects>
-                <viewController id="Ndr-JR-uVW" sceneMemberID="viewController">
+                <viewController id="Ndr-JR-uVW" customClass="Payment" customModule="CheckOut" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ETk-Io-AJt"/>
                         <viewControllerLayoutGuide type="bottom" id="zjX-M0-QLv"/>
@@ -21,7 +21,11 @@
                                 <rect key="frame" x="0.0" y="-6" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Betaling" id="eO9-4T-PjV">
-                                        <barButtonItem key="leftBarButtonItem" title="Tilbage" id="PQa-lQ-8mx"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Tilbage" id="PQa-lQ-8mx">
+                                            <connections>
+                                                <action selector="back:" destination="Ndr-JR-uVW" id="o3A-Ii-iR8"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -161,7 +165,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="Fvp-0x-RIG" kind="show" identifier="Betaling" id="hd4-b9-WIN"/>
+                        <segue destination="Fvp-0x-RIG" kind="show" identifier="Kvitteringer" id="hd4-b9-WIN"/>
                         <segue destination="zVV-j0-DGw" kind="show" identifier="Profil" id="hUN-r2-ANZ"/>
                         <segue destination="zOc-ve-Wiw" kind="show" identifier="Steder" id="2FM-9q-tqc"/>
                         <segue destination="3L0-1A-QLa" kind="show" identifier="Support" id="9O6-nx-BGU"/>
@@ -197,7 +201,7 @@
         <!--Profil-->
         <scene sceneID="zAO-vw-fcD">
             <objects>
-                <viewController storyboardIdentifier="vc2" id="zVV-j0-DGw" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="vc2" id="zVV-j0-DGw" customClass="Profile" customModule="CheckOut" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RnA-Kg-cim"/>
                         <viewControllerLayoutGuide type="bottom" id="BWd-IP-z4F"/>
@@ -213,12 +217,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tk9-Mv-Axw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1540" y="-179"/>
+            <point key="canvasLocation" x="1548" y="-179"/>
         </scene>
         <!--Support-->
         <scene sceneID="d0Q-it-uPh">
             <objects>
-                <viewController id="3L0-1A-QLa" sceneMemberID="viewController">
+                <viewController id="3L0-1A-QLa" customClass="Support" customModule="CheckOut" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Rdi-XO-zVc"/>
                         <viewControllerLayoutGuide type="bottom" id="39t-Iv-KY7"/>
@@ -234,12 +238,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OOT-lA-asu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1540" y="511"/>
+            <point key="canvasLocation" x="1540" y="522"/>
         </scene>
-        <!--Title-->
+        <!--Places-->
         <scene sceneID="cUf-w8-D8v">
             <objects>
-                <viewController storyboardIdentifier="vc3" id="zOc-ve-Wiw" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="vc3" id="zOc-ve-Wiw" customClass="Places" customModule="CheckOut" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vTg-L5-XMk"/>
                         <viewControllerLayoutGuide type="bottom" id="yCK-hs-3B9"/>
@@ -247,11 +251,56 @@
                     <view key="view" contentMode="scaleToFill" id="oUW-6O-04d">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="i0a-Ho-cqA">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Places" textLabel="fdS-Ch-LK4" detailTextLabel="cuo-Bz-rkY" style="IBUITableViewCellStyleSubtitle" id="sXC-tq-ota">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sXC-tq-ota" id="weD-PI-GAl">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fdS-Ch-LK4">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cuo-Bz-rkY">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="zOc-ve-Wiw" id="uux-Eu-Go6"/>
+                                    <outlet property="delegate" destination="zOc-ve-Wiw" id="6dW-xf-4Oe"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nPu-7L-D3b">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Steder" id="fXF-zi-cVf"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="nPu-7L-D3b" firstAttribute="top" secondItem="oUW-6O-04d" secondAttribute="topMargin" id="Qw3-L7-evf"/>
+                            <constraint firstItem="nPu-7L-D3b" firstAttribute="leading" secondItem="oUW-6O-04d" secondAttribute="leadingMargin" constant="-16" id="TGB-cU-r4E"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nPu-7L-D3b" secondAttribute="trailing" constant="-16" id="mh1-za-Ucb"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" prompt="Steder" id="Kv9-cx-KiQ"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="i0a-Ho-cqA" id="ATz-3k-U0W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cRJ-4q-R0C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

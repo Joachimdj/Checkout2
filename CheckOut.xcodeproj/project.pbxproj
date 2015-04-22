@@ -20,6 +20,11 @@
 		88537BB31AE80C1E00D03E11 /* DLHamburguerNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88537BAD1AE80C1E00D03E11 /* DLHamburguerNavigationController.swift */; };
 		88537BB41AE80C1E00D03E11 /* DLHamburguerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88537BAE1AE80C1E00D03E11 /* DLHamburguerViewController.swift */; };
 		88537BBA1AE82C4A00D03E11 /* MenuCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88537BB91AE82C4A00D03E11 /* MenuCard.swift */; };
+		88AE19351AE8443600A630F7 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AE19341AE8443600A630F7 /* Payment.swift */; };
+		88AE19371AE8470C00A630F7 /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AE19361AE8470C00A630F7 /* Places.swift */; };
+		88AE19391AE84B0E00A630F7 /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AE19381AE84B0E00A630F7 /* Support.swift */; };
+		88AE193B1AE84B7B00A630F7 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AE193A1AE84B7B00A630F7 /* Profile.swift */; };
+		88AE193D1AE84BA900A630F7 /* ReciptsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AE193C1AE84BA900A630F7 /* ReciptsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +55,11 @@
 		88537BAD1AE80C1E00D03E11 /* DLHamburguerNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLHamburguerNavigationController.swift; sourceTree = "<group>"; };
 		88537BAE1AE80C1E00D03E11 /* DLHamburguerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLHamburguerViewController.swift; sourceTree = "<group>"; };
 		88537BB91AE82C4A00D03E11 /* MenuCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCard.swift; sourceTree = "<group>"; };
+		88AE19341AE8443600A630F7 /* Payment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
+		88AE19361AE8470C00A630F7 /* Places.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
+		88AE19381AE84B0E00A630F7 /* Support.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Support.swift; path = ../Support.swift; sourceTree = "<group>"; };
+		88AE193A1AE84B7B00A630F7 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		88AE193C1AE84BA900A630F7 /* ReciptsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReciptsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,10 +110,15 @@
 				88537BAE1AE80C1E00D03E11 /* DLHamburguerViewController.swift */,
 				88537B7A1AE8036C00D03E11 /* AppDelegate.swift */,
 				88537B811AE8036C00D03E11 /* Main.storyboard */,
+				88AE193C1AE84BA900A630F7 /* ReciptsTableViewController.swift */,
+				88AE193A1AE84B7B00A630F7 /* Profile.swift */,
 				88537B841AE8036C00D03E11 /* Images.xcassets */,
 				88537B861AE8036C00D03E11 /* LaunchScreen.xib */,
 				88537B7C1AE8036C00D03E11 /* CheckOut.xcdatamodeld */,
 				88537B781AE8036C00D03E11 /* Supporting Files */,
+				88AE19341AE8443600A630F7 /* Payment.swift */,
+				88AE19361AE8470C00A630F7 /* Places.swift */,
+				88AE19381AE84B0E00A630F7 /* Support.swift */,
 			);
 			path = CheckOut;
 			sourceTree = "<group>";
@@ -233,13 +248,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88AE193D1AE84BA900A630F7 /* ReciptsTableViewController.swift in Sources */,
 				88537BB41AE80C1E00D03E11 /* DLHamburguerViewController.swift in Sources */,
 				88537BBA1AE82C4A00D03E11 /* MenuCard.swift in Sources */,
 				88537B7B1AE8036C00D03E11 /* AppDelegate.swift in Sources */,
+				88AE193B1AE84B7B00A630F7 /* Profile.swift in Sources */,
 				88537BAF1AE80C1E00D03E11 /* DLDemoMainContentViewController.swift in Sources */,
+				88AE19351AE8443600A630F7 /* Payment.swift in Sources */,
+				88AE19391AE84B0E00A630F7 /* Support.swift in Sources */,
 				88537BB01AE80C1E00D03E11 /* DLDemoMenuViewController.swift in Sources */,
 				88537BB31AE80C1E00D03E11 /* DLHamburguerNavigationController.swift in Sources */,
 				88537BB11AE80C1E00D03E11 /* DLDemoRootViewController.swift in Sources */,
+				88AE19371AE8470C00A630F7 /* Places.swift in Sources */,
 				88537BB21AE80C1E00D03E11 /* DLHamburguerContainerViewController.swift in Sources */,
 				88537B7E1AE8036C00D03E11 /* CheckOut.xcdatamodeld in Sources */,
 			);

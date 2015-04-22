@@ -314,7 +314,9 @@ class DLHamburguerContainerViewController: UIViewController {
         self.fixLayoutWithDuration(coordinator.transitionDuration())
     }
     
-    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 }
 
 
